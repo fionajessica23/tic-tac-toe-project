@@ -1,0 +1,65 @@
+TIC TAC TOE
+Render a game board
+Let the player click on the box that they want
+Alternate the ‘X’ and ’O’
+Show visually who won at the end of the game, or show the game as a tie
+
+
+Timeline
+Tuesday, 12 September 2017
+Working on the pseudo code
+Get feedback from teacher
+Create the markup
+Start doing the JS logic
+
+
+Wednesday, 13 September 2017
+Continue with the JS logic
+DOM Manipulation
+Testing
+
+
+Thursday, 14 September 2017
+Working on the style
+Create a readme.md
+
+
+Friday, 15 September 2017
+Presentation
+
+
+Components:
+Data
+Presentation
+Markup
+Style
+DOM manipulation
+
+
+
+Markup:
+Make a div that contains 3 divs, each of the 3 divs will contain 3 divs, to hold the board game?
+
+
+
+Data:
+Data structure using 9 objects in an array? Or using 1 array that holds 9 elements?
+  When doing the winning checking, which one is easier? 
+
+There are 8 possible winning scenarios for either ‘O’ or ‘X’
+		Using 8 ‘if’ to check?
+
+
+
+
+
+
+
+
+
+
+
+Render a game board
+Let the player click on the box that they want
+Alternate the ‘X’ and ’O’
+Show visually who won at the end of the game, or show the game as a tie
