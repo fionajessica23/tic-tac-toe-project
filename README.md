@@ -1,7 +1,6 @@
 # Tic Tac Toe
 
-[Click here to play](https://fionajessica23.github.io/tic-tac-toe-project/)
-Technologies used: HTML, CSS, Javascript
+[Click here to play](https://fionajessica23.github.io/tic-tac-toe-project/)  Technologies used: HTML, CSS, Javascript
 
 
 
