@@ -1,7 +1,11 @@
 //note to do
 // update flowchart
+// link the reset game button
 // update css
+// make readme.md
 // update comments on lines in JS
+// improve the codes for checking winning, with passing in 'marker'
+// need to do if possible, listing how many rounds and the score for each players
 
 //option 1: using object by assigning every boxes to unique property
 //pro: easy to compare values using their unique keys to check winning
@@ -139,7 +143,7 @@ var showResult = function (symbol) {
 
 var resetGame = function () {
   //clear textContent from #display-winner
-  document.querySelector('#display-winner').textContent = '';
+  document.querySelector('#display-winner').textContent = "Let's play!";
   numberOfTurn = 0;
 
   //clear all elements in boardArr array
