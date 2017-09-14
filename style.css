@@ -15,13 +15,9 @@ main {
   width: 100%;
   margin: 0 auto;
   text-align: center;
-  height: 700px;
+  height: 70px;
 }
-.first-row,
-.second-row,
-.third-row {
-  height: 33%;
-}
+
 
 .box {
   border: 1px solid black;

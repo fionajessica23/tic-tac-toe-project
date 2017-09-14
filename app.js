@@ -3,6 +3,16 @@
 // update css
 // update comments on lines in JS
 
+//option 1: using object by assigning every boxes to unique property
+//pro: easy to compare values using their unique keys to check winning
+//cons: can not use loop, it's required to reset the game easily
+
+
+// use this
+//option 2: using 1 array containing 9 elements
+//pro: easier to reset the game by using loop to clear values
+    // easier to set size of the boards
+    // easier to access the element values
 
 
 var clickSymbol = 'x';
@@ -18,15 +28,7 @@ for (var i = 0; i < 9; i++) {
 }
 
 var clickedBox = function (event) {
-// alternate X and O
-  // if current value = X:
-  // show x
-  // set current value to o
-  //
-  //
-  // if current value = o
-  // show o
-  // set current value to x
+
   numberOfTurn += 1;
 
   var saveBoxId = event.target.id;
@@ -48,15 +50,18 @@ var clickedBox = function (event) {
   //set board array
   boardArr[boxId-1] = clickSymbol;
 
-  if (clickSymbol === 'x') {
-  clickSymbol = 'o';
+
+  // alternate X and O
+  if (clickSymbol === 'x') { // if current value = x
+  clickSymbol = 'o'; // set current value to o
 
   } else {
-  clickSymbol = 'x';
+  clickSymbol = 'x'; // set current value to x
 
   }
   checkResult();
 }
+
 
 
 var checkResult = function () {
@@ -106,7 +111,7 @@ var checkResult = function () {
     isWinning = true;
     showResult('o');
   // check diagonals if they are the same value
-  } else (
+  } else if (
     (boardArr[0] === 'o' && boardArr[4] === 'o' && boardArr[8] === 'o') ||
     (boardArr[2] === 'o' && boardArr[4] === 'o' && boardArr[6] === 'o')
     )
@@ -123,18 +128,6 @@ var checkResult = function () {
   }
 }
 //otherwise keep playing
-
-
-//option 1: using object by assigning every boxes to unique property
-//pro: easy to compare values using their unique keys to check winning
-//cons: can not use loop, it's required to reset the game easily
-
-
-// use this
-//option 2: using 1 array containing 9 elements
-//pro: easier to reset the game by using loop to clear values
-    // easier to set size of the boards
-    // easier to access the element values
 
 var showResult = function (symbol) {
   if (symbol === 'tie') {
