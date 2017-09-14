@@ -3,15 +3,20 @@
 }
 
 body {
-  margin: 100px 0;
+  margin: 25px 0;
+  background: url(http://www.dinetafoods.com/wp-content/uploads/2015/04/Red-Pattern-Batik-Art-Wallpaper.jpg) no-repeat center center fixed;
+  background-size: cover;
 }
 
 header,
 footer {
   max-width: 600px;
   margin: 20px auto;
-  background-color: lightblue;
+  background-color: #300A04;
   text-align: center;
+  opacity: 0.8;
+  border-radius: 15px;
+  padding: 10px 0;
 }
 
 
@@ -21,6 +26,7 @@ main {
   background-color: mistyrose;
   text-align: center;
   height: auto;
+  border-radius: 15px;
 }
 
 
@@ -31,15 +37,15 @@ main {
 
 
 .box {
-  border: 7px solid grey;
+  border: 5px solid #3D0B01;
   text-align: center;
   /*below is to set vertically equal*/
   /*padding: 18px 0;*/
   display: inline-block;
   /*below is important, inline-block by default set the vertical-align to baseline*/
   vertical-align: top;
-  width: 33%;
-  height: 171px;
+  width: 33.333333%;
+  height: 172px;
   font-size: 120px;
   font-family: 'Lucida Console', Monaco, monospace;
   font-weight: bold;
@@ -47,49 +53,73 @@ main {
 }
 
 .box:hover {
-  background-color: lightgrey;
+  background-color: #3D0B01;
   cursor: pointer;
+  color: white;
+
 }
 
 #box-1,
 #box-2,
 #box-3 {
-  border-top: white;
+  border-top: mistyrose;
 }
 
 
 #box-1,
 #box-4,
 #box-7 {
-  border-left: white;
+  border-left: mistyrose;
 }
 
 
 #box-3,
 #box-6,
 #box-9 {
-  border-right: white;
+  border-right: mistyrose;
 }
 
 
 #box-7,
 #box-8,
 #box-9 {
-  border-bottom: white;
+  border-bottom: mistyrose;
 }
+
 
 h1 {
   font-family: 'Lucida Sans Unicode', Lucida Grande, sans-serif;
   font-size: 50px;
+  color: #F65F1D;
+  margin-top: 8px;
+  margin-bottom: 5px;
 }
 
-p {
+.instruction {
   font-family: 'Lucida Sans Unicode', Lucida Grande, sans-serif;
   font-size: 20px;
+  color: #F65F1D;
 }
 
-#display-winner {
+.display-winner {
   font-family: 'Lucida Sans Unicode', Lucida Grande, sans-serif;
   font-size: 30px;
-  color: crimson;
+  /*margin-bottom: 10px;*/
+  font-weight: 600;
+  color: mistyrose;
+}
+
+.reset-btn {
+  background-color: transparent;
+  border: none;
+  color: mistyrose;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 22px;
+  margin: 4px 2px;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: 600;
 }

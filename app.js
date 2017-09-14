@@ -1,7 +1,5 @@
 //note to do
-// update flowchart
 // put a background color to the body
-// link the reset game button
 // update css
 // make readme.md
 // update comments on lines in JS
@@ -19,10 +17,8 @@
     // easier to set size of the boards
     // easier to access the element values
 
-var clickSymbol = 'x';
-
-// init board array by set values to ''
 var boardArr = [];
+var clickSymbol = 'x';
 var isWinning = false;
 var isTie = false;
 var numberOfTurn = 0;
@@ -136,14 +132,16 @@ var showResult = function (symbol) {
   if (symbol === 'tie') {
     document.querySelector('#display-winner').textContent = "It's a tie";
   } else {
-    document.querySelector('#display-winner').textContent = symbol + ' is winning!';
+    document.querySelector('#display-winner').innerHTML = symbol + ' is winning!';
   }
+  document.querySelector('#instruction').style.visibility = 'hidden';
 }
 
 
 var resetGame = function () {
   //clear textContent from #display-winner
   document.querySelector('#display-winner').textContent = "Let's play!";
+  document.querySelector('#instruction').style.visibility = 'visible';
   numberOfTurn = 0;
 
   //clear all elements in boardArr array
@@ -165,3 +163,5 @@ for (var i = 1; i <= 9; i++) {
   var id = '#box-' + i
   document.querySelector(id).addEventListener('click', makeTurn);
 }
+
+document.querySelector('#reset-btn').addEventListener('click', resetGame);
