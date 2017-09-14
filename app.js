@@ -1,5 +1,8 @@
 //note to do
+// add approach to the readme.md file 
 // update comments on lines in JS
+// check the layout on windows and mac
+// add the sound for winning
 // need to do if possible, listing how many rounds and the score for each players
 
 //option 1: using object by assigning every boxes to unique property
