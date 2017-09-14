@@ -1,9 +1,5 @@
 //note to do
-// put a background color to the body
-// update css
-// make readme.md
 // update comments on lines in JS
-// improve the codes for checking winning, with passing in 'marker'
 // need to do if possible, listing how many rounds and the score for each players
 
 //option 1: using object by assigning every boxes to unique property
@@ -50,72 +46,45 @@ var makeTurn = function (event) {
   //set board array
   boardArr[boxId-1] = clickSymbol;
 
+  checkResult(clickSymbol);
 
   // alternate X and O
   if (clickSymbol === 'x') { // if current value = x
     clickSymbol = 'o'; // set current value to o
   } else {
-  clickSymbol = 'x'; // set current value to x
-
+    clickSymbol = 'x'; // set current value to x
   }
-  checkResult();
 }
 
 
-var checkResult = function () {
+var checkResult = function (symbol) {
 // check all value of each boxes
   // check rows if they are the same value
   if (
-      (boardArr[0] === 'x' && boardArr[1] === 'x' && boardArr[2] === 'x') ||
-      (boardArr[3] === 'x' && boardArr[4] === 'x' && boardArr[5] === 'x') ||
-      (boardArr[6] === 'x' && boardArr[7] === 'x' && boardArr[8] === 'x')
+      (boardArr[0] === symbol && boardArr[1] === symbol && boardArr[2] === symbol) ||
+      (boardArr[3] === symbol && boardArr[4] === symbol && boardArr[5] === symbol) ||
+      (boardArr[6] === symbol && boardArr[7] === symbol && boardArr[8] === symbol)
      )
   {
     isWinning = true;
-    showResult('x');
+    showResult(symbol);
   // check columns if they are the same value
   } else if (
-    (boardArr[0] === 'x' && boardArr[3] === 'x' && boardArr[6] === 'x') ||
-    (boardArr[1] === 'x' && boardArr[4] === 'x' && boardArr[7] === 'x') ||
-    (boardArr[2] === 'x' && boardArr[5] === 'x' && boardArr[8] === 'x')
+    (boardArr[0] === symbol && boardArr[3] === symbol && boardArr[6] === symbol) ||
+    (boardArr[1] === symbol && boardArr[4] === symbol && boardArr[7] === symbol) ||
+    (boardArr[2] === symbol && boardArr[5] === symbol && boardArr[8] === symbol)
     )
   {
     isWinning = true;
-    showResult('x');
+    showResult(symbol);
   // check diagonals if they are the same value
   } else if (
-    (boardArr[0] === 'x' && boardArr[4] === 'x' && boardArr[8] === 'x') ||
-    (boardArr[2] === 'x' && boardArr[4] === 'x' && boardArr[6] === 'x')
+    (boardArr[0] === symbol && boardArr[4] === symbol && boardArr[8] === symbol) ||
+    (boardArr[2] === symbol && boardArr[4] === symbol && boardArr[6] === symbol)
     )
   {
     isWinning = true;
-    showResult('x');
-    // check rows if they are the same value
-  } else if (
-      (boardArr[0] === 'o' && boardArr[1] === 'o' && boardArr[2] === 'o') ||
-      (boardArr[3] === 'o' && boardArr[4] === 'o' && boardArr[5] === 'o') ||
-      (boardArr[6] === 'o' && boardArr[7] === 'o' && boardArr[8] === 'o')
-     )
-  {
-    isWinning = true;
-    showResult('o');
-  // check columns if they are the same value
-  } else if (
-    (boardArr[0] === 'o' && boardArr[3] === 'o' && boardArr[6] === 'o') ||
-    (boardArr[1] === 'o' && boardArr[4] === 'o' && boardArr[7] === 'o') ||
-    (boardArr[2] === 'o' && boardArr[5] === 'o' && boardArr[8] === 'o')
-    )
-  {
-    isWinning = true;
-    showResult('o');
-  // check diagonals if they are the same value
-  } else if (
-    (boardArr[0] === 'o' && boardArr[4] === 'o' && boardArr[8] === 'o') ||
-    (boardArr[2] === 'o' && boardArr[4] === 'o' && boardArr[6] === 'o')
-    )
-  {
-    isWinning = true;
-    showResult('o');
+    showResult(symbol);
   }
 
  // check if tie
@@ -123,7 +92,6 @@ var checkResult = function () {
   if (numberOfTurn === 9 && isWinning === false) {
     isTie = true;
     showResult('tie');
-
   }
 }
 //otherwise keep playing
@@ -133,6 +101,8 @@ var showResult = function (symbol) {
     document.querySelector('#display-winner').textContent = "It's a tie";
   } else {
     document.querySelector('#display-winner').innerHTML = symbol + ' is winning!';
+    var audio = new Audio('music.mp3');
+    audio.play();
   }
   document.querySelector('#instruction').style.visibility = 'hidden';
 }
