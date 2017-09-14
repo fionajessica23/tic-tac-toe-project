@@ -1,5 +1,6 @@
 //note to do
 // update flowchart
+// put a background color to the body
 // link the reset game button
 // update css
 // make readme.md
@@ -30,7 +31,7 @@ for (var i = 0; i < 9; i++) {
   boardArr[i] = '';
 }
 
-var clickedBox = function (event) {
+var makeTurn = function (event) {
 
   numberOfTurn += 1;
 
@@ -56,8 +57,7 @@ var clickedBox = function (event) {
 
   // alternate X and O
   if (clickSymbol === 'x') { // if current value = x
-  clickSymbol = 'o'; // set current value to o
-
+    clickSymbol = 'o'; // set current value to o
   } else {
   clickSymbol = 'x'; // set current value to x
 
@@ -136,7 +136,7 @@ var showResult = function (symbol) {
   if (symbol === 'tie') {
     document.querySelector('#display-winner').textContent = "It's a tie";
   } else {
-    document.querySelector('#display-winner').textContent = symbol + ' is the winner';
+    document.querySelector('#display-winner').textContent = symbol + ' is winning!';
   }
 }
 
@@ -163,5 +163,5 @@ var resetGame = function () {
 
 for (var i = 1; i <= 9; i++) {
   var id = '#box-' + i
-  document.querySelector(id).addEventListener('click', clickedBox);
+  document.querySelector(id).addEventListener('click', makeTurn);
 }

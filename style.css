@@ -3,12 +3,12 @@
 }
 
 body {
-  margin: 0;
+  margin: 100px 0;
 }
 
 header,
 footer {
-  max-width: 1500px;
+  max-width: 600px;
   margin: 20px auto;
   background-color: lightblue;
   text-align: center;
@@ -16,7 +16,7 @@ footer {
 
 
 main {
-  max-width: 796px;
+  max-width: 600px;
   margin: 0 auto;
   background-color: mistyrose;
   text-align: center;
@@ -26,21 +26,21 @@ main {
 
 .ttt-container {
   width: auto;
-  height: 640px;
+  height: 515px;
 }
 
 
 .box {
-  border: 3px solid grey;
+  border: 7px solid grey;
   text-align: center;
   /*below is to set vertically equal*/
-  padding: 40px 0;
+  /*padding: 18px 0;*/
   display: inline-block;
   /*below is important, inline-block by default set the vertical-align to baseline*/
   vertical-align: top;
   width: 33%;
-  height: 33%;
-  font-size: 100px;
+  height: 171px;
+  font-size: 120px;
   font-family: 'Lucida Console', Monaco, monospace;
   font-weight: bold;
 
@@ -48,6 +48,7 @@ main {
 
 .box:hover {
   background-color: lightgrey;
+  cursor: pointer;
 }
 
 #box-1,
@@ -75,4 +76,20 @@ main {
 #box-8,
 #box-9 {
   border-bottom: white;
+}
+
+h1 {
+  font-family: 'Lucida Sans Unicode', Lucida Grande, sans-serif;
+  font-size: 50px;
+}
+
+p {
+  font-family: 'Lucida Sans Unicode', Lucida Grande, sans-serif;
+  font-size: 20px;
+}
+
+#display-winner {
+  font-family: 'Lucida Sans Unicode', Lucida Grande, sans-serif;
+  font-size: 30px;
+  color: crimson;
 }
