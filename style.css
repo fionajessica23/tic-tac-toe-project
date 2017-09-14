@@ -3,7 +3,7 @@
 }
 
 body {
-  margin: 25px 0;
+  margin: 60px 0;
   background: url(batik.jpg) no-repeat center center fixed;
   background-size: cover;
 }
@@ -40,7 +40,7 @@ main {
   border: 5px solid #3D0B01;
   text-align: center;
   /*below is to set vertically equal*/
-  padding: 10px 0;
+  padding: 12px 0;
   display: inline-block;
   /*below is important, inline-block by default set the vertical-align to baseline*/
   vertical-align: top;
