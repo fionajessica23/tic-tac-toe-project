@@ -40,7 +40,7 @@ main {
   border: 5px solid #3D0B01;
   text-align: center;
   /*below is to set vertically equal*/
-  padding: 12px 0;
+  padding: 6px 0;
   display: inline-block;
   /*below is important, inline-block by default set the vertical-align to baseline*/
   vertical-align: top;

@@ -1,5 +1,5 @@
 //note to do
-// add approach to the readme.md file 
+// add approach to the readme.md file
 // update comments on lines in JS
 // check the layout on windows and mac
 // add the sound for winning
@@ -102,9 +102,11 @@ var checkResult = function (symbol) {
 var showResult = function (symbol) {
   if (symbol === 'tie') {
     document.querySelector('#display-winner').textContent = "It's a tie";
+    var audio = new Audio('tie.mp3');
+    audio.play();
   } else {
     document.querySelector('#display-winner').innerHTML = symbol + ' is winning!';
-    var audio = new Audio('music.mp3');
+    var audio = new Audio('win.mp3');
     audio.play();
   }
   document.querySelector('#instruction').style.visibility = 'hidden';
