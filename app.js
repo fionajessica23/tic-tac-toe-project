@@ -14,7 +14,6 @@
     // easier to set size of the boards
     // easier to access the element values
 
-
 var clickSymbol = 'x';
 
 // init board array by set values to ''
@@ -61,7 +60,6 @@ var clickedBox = function (event) {
   }
   checkResult();
 }
-
 
 
 var checkResult = function () {
@@ -125,6 +123,7 @@ var checkResult = function () {
   if (numberOfTurn === 9 && isWinning === false) {
     isTie = true;
     showResult('tie');
+
   }
 }
 //otherwise keep playing
@@ -141,6 +140,7 @@ var showResult = function (symbol) {
 var resetGame = function () {
   //clear textContent from #display-winner
   document.querySelector('#display-winner').textContent = '';
+  numberOfTurn = 0;
 
   //clear all elements in boardArr array
   for (var i = 1; i <= 9; i++) {
