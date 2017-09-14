@@ -3,27 +3,69 @@
 }
 
 body {
-  background-color: lightblue;
+  margin: 0;
 }
+
+header,
+footer {
+  max-width: 1500px;
+  margin: 20px auto;
+  background-color: lightblue;
+  text-align: center;
+}
+
 
 main {
-  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  background-color: mistyrose;
+  text-align: center;
+  height: auto;
 }
 
+
 .ttt-container {
-  background-color: white;
-  width: 100%;
-  margin: 0 auto;
-  text-align: center;
-  height: 70px;
+  width: auto;
+  height: 300px;
 }
 
 
 .box {
-  border: 1px solid black;
+  border: 3px solid grey;
   text-align: center;
+  /*below is to set vertically equal*/
+  /*padding: 10px 0;*/
   display: inline-block;
+  /*below is important, inline-block by default set the vertical-align to baseline*/
+  vertical-align: top;
   width: 33%;
-  height: 100%;
-  font-size: 40px;
+  height: 33%;
+  font-size: 80px;
+}
+
+#box-1,
+#box-2,
+#box-3 {
+  border-top: white;
+}
+
+
+#box-1,
+#box-4,
+#box-7 {
+  border-left: white;
+}
+
+
+#box-3,
+#box-6,
+#box-9 {
+  border-right: white;
+}
+
+
+#box-7,
+#box-8,
+#box-9 {
+  border-bottom: white;
 }
