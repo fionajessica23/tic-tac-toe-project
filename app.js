@@ -1,17 +1,3 @@
-//note to do
-// add approach to the readme.md file
-
-//option 1: using object by assigning every boxes to unique property
-//pro: easy to compare values using their unique keys to check winning
-//cons: can not use loop, it's required to reset the game easily
-
-
-// use this
-//option 2: using 1 array containing 9 elements
-//pro: easier to reset the game by using loop to clear values
-    // easier to set size of the boards
-    // easier to access the element values
-
 var boardArr = [];
 var clickSymbol = 'x';
 var isWinning = false;
