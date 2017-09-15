@@ -144,6 +144,32 @@ var nextRound = function () {
 }
 
 
+var resetGame = function () {
+  //clear textContent from #display-winner
+  document.querySelector('#display-winner').textContent = "Let's play!";
+  document.querySelector('#instruction').style.visibility = 'visible';
+  numberOfTurn = 0;
+  playerxScore = 0;
+  playeroScore = 0;
+  document.querySelector('#score-x').textContent = playerxScore;
+  document.querySelector('#score-o').textContent = playeroScore;
+
+  //clear all elements in boardArr array
+  for (var i = 1; i <= 9; i++) {
+    var id = '#box-' + i;
+    document.querySelector(id).textContent = '';
+  }
+
+  for (var i = 0; i < 9; i++) {
+    boardArr[i] = '';
+  }
+  isWinning = false;
+  isTie = false;
+  clickSymbol = 'x';
+}
+
+document.querySelector('#reset-game').addEventListener('click', resetGame);
+
 for (var i = 1; i <= 9; i++) {
   var id = '#box-' + i
   document.querySelector(id).addEventListener('click', makeTurn);
