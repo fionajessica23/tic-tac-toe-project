@@ -103,7 +103,7 @@ var checkResult = function (symbol) {
 
 var showResult = function (symbol) {
   if (symbol === 'tie') {
-    document.querySelector('#display-winner').textContent = "It's a tie";
+    document.querySelector('#display-winner').textContent = "It's a tie!";
     var audio = new Audio('tie.mp3');
     audio.play();
   } else {

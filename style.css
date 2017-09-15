@@ -124,6 +124,9 @@ h1 {
   font-weight: 600;
 }
 
-.player {
+.player-x,
+.player-o {
   color: white;
+  padding: 20px;
+  font-size: 30px;
 }
