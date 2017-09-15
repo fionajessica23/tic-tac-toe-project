@@ -109,7 +109,7 @@ h1 {
   color: mistyrose;
 }
 
-.reset-btn {
+.next-round {
   background-color: transparent;
   border: none;
   color: mistyrose;
@@ -122,4 +122,8 @@ h1 {
   cursor: pointer;
   text-transform: uppercase;
   font-weight: 600;
+}
+
+.player {
+  color: white;
 }

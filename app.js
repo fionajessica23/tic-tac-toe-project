@@ -1,8 +1,6 @@
 //note to do
 // add approach to the readme.md file
 // update comments on lines in JS
-// check the layout on windows and mac
-// add the sound for winning
 // need to do if possible, listing how many rounds and the score for each players
 
 //option 1: using object by assigning every boxes to unique property
@@ -21,6 +19,8 @@ var clickSymbol = 'x';
 var isWinning = false;
 var isTie = false;
 var numberOfTurn = 0;
+var playerxScore = 0;
+var playeroScore = 0;
 
 for (var i = 0; i < 9; i++) {
   boardArr[i] = '';
@@ -33,9 +33,9 @@ var makeTurn = function (event) {
   var saveBoxId = event.target.id;
   var boxId = saveBoxId.slice(-1);
 
-  //check if game is already won, call resetGame
+  //check if game is already won, call nextRound
   if (isWinning || isTie) {
-    resetGame();
+    nextRound();
     return;
   }
   // if that particular elem in the array already filled in
@@ -71,6 +71,7 @@ var checkResult = function (symbol) {
   {
     isWinning = true;
     showResult(symbol);
+
   // check columns if they are the same value
   } else if (
     (boardArr[0] === symbol && boardArr[3] === symbol && boardArr[6] === symbol) ||
@@ -80,6 +81,7 @@ var checkResult = function (symbol) {
   {
     isWinning = true;
     showResult(symbol);
+
   // check diagonals if they are the same value
   } else if (
     (boardArr[0] === symbol && boardArr[4] === symbol && boardArr[8] === symbol) ||
@@ -106,6 +108,13 @@ var showResult = function (symbol) {
     audio.play();
   } else {
     document.querySelector('#display-winner').innerHTML = symbol + ' is winning!';
+    if (symbol === 'x') {
+      playerxScore += 1;
+      document.querySelector('#score-x').textContent = playerxScore;
+    } else {
+      playeroScore += 1;
+      document.querySelector('#score-o').textContent = playeroScore;
+    }
     var audio = new Audio('win.mp3');
     audio.play();
   }
@@ -113,11 +122,12 @@ var showResult = function (symbol) {
 }
 
 
-var resetGame = function () {
+var nextRound = function () {
   //clear textContent from #display-winner
   document.querySelector('#display-winner').textContent = "Let's play!";
   document.querySelector('#instruction').style.visibility = 'visible';
   numberOfTurn = 0;
+
 
   //clear all elements in boardArr array
   for (var i = 1; i <= 9; i++) {
@@ -139,4 +149,4 @@ for (var i = 1; i <= 9; i++) {
   document.querySelector(id).addEventListener('click', makeTurn);
 }
 
-document.querySelector('#reset-btn').addEventListener('click', resetGame);
+document.querySelector('#next-round').addEventListener('click', nextRound);
