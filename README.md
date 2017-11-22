@@ -6,7 +6,7 @@
 
 ### Approach
 
-In building a tic-tac-toe game consisted of a 3x3 tile and alternating naughts and crosses, I use arrays of 9 elements to hold the x and o values because I figure it will be easier to set the size of the boards, to access the elements values and to reset the game using loop. I also set that the "x" will always goes first when the game starts, so it's easier to create the jasvascript.
+In building a tic-tac-toe game consisted of a 3x3 tile and alternating naughts and crosses, I use arrays of 9 elements to hold the x and o values because I figure it will be easier to set the size of the boards, to access the elements values and to reset the game using loop. I also set that the "x" will always goes first when the game starts, so it's easier to create the javascript.
 Then I created some functions, they are for making turn, to check result of winning during the game and to reset the game. The main function is the making turn function, it took me quite a while to get the code right. After making sure that the basic functions are working properly, then I added two more functions: to show the score to the players and to go to the next round.
 
 ---
